@@ -95,9 +95,10 @@ html, body
 		@extend h4
 		margin: 0
 		color: $base
+		cursor: pointer
 
-		&:hover 
-			color: $info
+		&:hover .title 
+			color: scale-color($info, $lightness: -25%)
 	
 	.news-title
 		padding-top: 0
@@ -110,7 +111,7 @@ html, body
 		small 
 			color: $lightgray
 
-	.share-button
+	a.share-button
 		position: absolute
 		width: 10vw
 		bottom: 0
@@ -121,6 +122,7 @@ html, body
 
 		&:hover 
 			color: $inverse
+			background-color: scale-color($info, $lightness: -15%)
 
 			
 #company-social

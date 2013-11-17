@@ -3581,27 +3581,28 @@ html, body {
 #main-content .news-item {
   margin: 0;
   color: #34495e;
+  cursor: pointer;
 }
-/* line 99, ../sass/flat-ui.sass */
-#main-content .news-item:hover {
-  color: #3498db;
+/* line 100, ../sass/flat-ui.sass */
+#main-content .news-item:hover .title {
+  color: #1f74ad;
 }
-/* line 102, ../sass/flat-ui.sass */
+/* line 103, ../sass/flat-ui.sass */
 #main-content .news-title {
   padding-top: 0;
   margin: 0;
 }
-/* line 106, ../sass/flat-ui.sass */
+/* line 107, ../sass/flat-ui.sass */
 #main-content .news-title a {
   color: inherit;
   text-decoration: none;
 }
-/* line 110, ../sass/flat-ui.sass */
+/* line 111, ../sass/flat-ui.sass */
 #main-content .news-title small {
   color: #ecf0f1;
 }
-/* line 113, ../sass/flat-ui.sass */
-#main-content .share-button {
+/* line 114, ../sass/flat-ui.sass */
+#main-content a.share-button {
   position: absolute;
   width: 10vw;
   bottom: 0;
@@ -3610,12 +3611,13 @@ html, body {
   background-color: #3498db;
   border-radius: 6px 0 0 0;
 }
-/* line 122, ../sass/flat-ui.sass */
-#main-content .share-button:hover {
+/* line 123, ../sass/flat-ui.sass */
+#main-content a.share-button:hover {
   color: white;
+  background-color: #2383c4;
 }
 
-/* line 126, ../sass/flat-ui.sass */
+/* line 128, ../sass/flat-ui.sass */
 #company-social {
   height: 90vh;
 }
