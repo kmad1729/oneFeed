@@ -62,7 +62,13 @@ html, body
 			border-style: solid
 			padding: 15px
 			text-align: center
-			
+
+			.remove 
+				background-color: $danger
+				height: 100%
+
+				&:hover
+					background-color: scale-color($danger, $lightness: -15%)					
 
 #main-content
 	height: 90vh
@@ -128,6 +134,22 @@ html, body
 #company-social
 	height: 90vh
 
+
+#fb-widget
+	border-radius: 6px
+	color: $base
+
+#fb-feed
+	p
+		color: $base
+
+#tw-widget
+	border-radius: 6px
+	color: $base
+
+#tw-feed
+	p
+		color: $base
 
 
 
