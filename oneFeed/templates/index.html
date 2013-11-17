@@ -36,25 +36,7 @@
 
     <div class="row-fluid">
         <div id="sidebar" class="span3 palette-night">
-            <ul class="palette-concrete" style="border-radius: 6px 6px 0 0;">
-                <li>
-                    <label>Your Company</label>
-                    <input id="company" type="text" placeholder="Company Name">
-                </li>
-            </ul>
-            <a href="#" class="btn btn-info btn-block btn-large share-button" style="border-radius: 0 0 6px 6px;">Feed It!</a>
-            <ul class="palette-concrete" style="border-radius: 6px 6px 0 0; margin-top: 15px">
-                <li>
-                    <label>Competitors</label>
-                    <input type="text" placeholder="Competitor Name" >
-                    <input type="text">
-                    <div class="tagsinput-add fui-plus-16" style="margin: 0 auto"></div>
-                </li>
-            </ul>
             <form action="index.html" method="GET">
-            <a href="#" class="btn btn-info btn-block btn-large" style="border-radius: 0 0 6px 6px;">Mash It!</a>
-
-            <form>
                 <ul class="palette-concrete" style="border-radius: 6px 6px 0 0;">
                     <li>
                         <label>Your Company</label>
@@ -203,22 +185,15 @@
 
 
 <!-- Load JS here for greater good =============================-->
-<script src="js/jquery-1.8.2.min.js"></script>
-<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-<script src="js/jquery.dropkick-1.0.0.js"></script>
-<script src="js/custom_checkbox_and_radio.js"></script>
-<script src="js/custom_radio.js"></script>
-<script src="js/jquery.tagsinput.js"></script>
-<script src="js/bootstrap-tooltip.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<script src="js/application.js"></script>
-<script>
-$(document).ready(function() {
-    $.getJSON("https://graph.facebook.com/29990386077?callback=?", null, function(likes) {
-            $("#fblikes").text(likes);
-});
-
-</script>
+<script src="../static/js/jquery-1.8.2.min.js"></script>
+<script src="../static/js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="../static/js/jquery.dropkick-1.0.0.js"></script>
+<script src="../static/js/custom_checkbox_and_radio.js"></script>
+<script src="../static/js/custom_radio.js"></script>
+<script src="../static/js/jquery.tagsinput.js"></script>
+<script src="../static/js/bootstrap-tooltip.js"></script>
+<script src="../static/js/jquery.placeholder.js"></script>
+<script src="../static/js/application.js"></script>
 <script>
 $(function() {
     $("#feed").click(function() {
@@ -247,20 +222,5 @@ $(function() {
 </script>
 
 
-    <!-- Load JS here for greater good =============================-->
-    <script src="../static/js/jquery-1.8.2.min.js"></script>
-    <script src="../static/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="../static/js/jquery.dropkick-1.0.0.js"></script>
-    <script src="../static/js/custom_checkbox_and_radio.js"></script>
-    <script src="../static/js/custom_radio.js"></script>
-    <script src="../static/js/jquery.tagsinput.js"></script>
-    <script src="../static/js/bootstrap-tooltip.js"></script>
-    <script src="../static/js/jquery.placeholder.js"></script>
-    <script src="http://vjs.zencdn.net/c/video.js"></script>
-    <script src="../static/js/application.js"></script>
-    <!--[if lt IE 8]>
-      <script src="js/icon-font-ie7.js"></script>
-      <script src="js/icon-font-ie7-24.js"></script>
-      <![endif]-->
   </body>
   </html>
