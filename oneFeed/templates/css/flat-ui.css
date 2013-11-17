@@ -2291,83 +2291,88 @@ textarea,
 }
 
 /* line 35, ../sass/modules/_palette.sass */
+.palette-white {
+  background-color: white;
+}
+
+/* line 38, ../sass/modules/_palette.sass */
 .palette-success-dark {
   background-color: #27ae60;
 }
 
-/* line 38, ../sass/modules/_palette.sass */
+/* line 41, ../sass/modules/_palette.sass */
 .palette-info-dark {
   background-color: #2980b9;
 }
 
-/* line 41, ../sass/modules/_palette.sass */
+/* line 44, ../sass/modules/_palette.sass */
 .palette-bright-dark {
   background-color: #f39c12;
 }
 
-/* line 44, ../sass/modules/_palette.sass */
+/* line 47, ../sass/modules/_palette.sass */
 .palette-amethyst {
   background-color: #9b59b6;
 }
 
-/* line 47, ../sass/modules/_palette.sass */
+/* line 50, ../sass/modules/_palette.sass */
 .palette-wisteria {
   background-color: #8e44ad;
 }
 
-/* line 50, ../sass/modules/_palette.sass */
+/* line 53, ../sass/modules/_palette.sass */
 .palette-carrot {
   background-color: #e67e22;
 }
 
-/* line 53, ../sass/modules/_palette.sass */
+/* line 56, ../sass/modules/_palette.sass */
 .palette-pumpkin {
   background-color: #d35400;
 }
 
-/* line 56, ../sass/modules/_palette.sass */
+/* line 59, ../sass/modules/_palette.sass */
 .palette-alizarin {
   background-color: #e74c3c;
 }
 
-/* line 59, ../sass/modules/_palette.sass */
+/* line 62, ../sass/modules/_palette.sass */
 .palette-pomegranate {
   background-color: #c0392b;
 }
 
-/* line 62, ../sass/modules/_palette.sass */
+/* line 65, ../sass/modules/_palette.sass */
 .palette-clouds {
   background-color: #ecf0f1;
   color: #bdc3c7;
 }
 
-/* line 66, ../sass/modules/_palette.sass */
+/* line 69, ../sass/modules/_palette.sass */
 .palette-silver {
   background-color: #bdc3c7;
 }
 
-/* line 69, ../sass/modules/_palette.sass */
+/* line 72, ../sass/modules/_palette.sass */
 .palette-concrete {
   background-color: #95a5a6;
 }
 
-/* line 72, ../sass/modules/_palette.sass */
+/* line 75, ../sass/modules/_palette.sass */
 .palette-asbestos {
   background-color: #7f8c8d;
 }
 
-/* line 76, ../sass/modules/_palette.sass */
+/* line 79, ../sass/modules/_palette.sass */
 .palette-paragraph {
   color: #7f8c8d;
   font-size: 12px;
   line-height: 17px;
 }
-/* line 81, ../sass/modules/_palette.sass */
+/* line 84, ../sass/modules/_palette.sass */
 .palette-paragraph span {
   color: #bdc3c7;
 }
 
-/* line 85, ../sass/modules/_palette.sass */
+/* line 88, ../sass/modules/_palette.sass */
 .palette-headline {
   color: #7f8c8d;
   font-weight: 700;
@@ -3557,60 +3562,66 @@ html, body {
 #main-content {
   height: 90vh;
   overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  float: left;
 }
-/* line 77, ../sass/flat-ui.sass */
+/* line 83, ../sass/flat-ui.sass */
 #main-content h1 {
+  position: relative;
   color: #34495e;
   text-align: center;
 }
-/* line 81, ../sass/flat-ui.sass */
+/* line 88, ../sass/flat-ui.sass */
 #main-content ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-/* line 86, ../sass/flat-ui.sass */
+/* line 93, ../sass/flat-ui.sass */
 #main-content ul li {
-  border-color: #888888;
-  border-width: 0 0 thin 0;
-  border-style: solid;
+  border: none;
   padding: 15px;
+  margin-bottom: 15px;
   position: relative;
 }
-/* line 93, ../sass/flat-ui.sass */
+/* line 99, ../sass/flat-ui.sass */
 #main-content ul li .no-padding {
   padding: 0;
 }
-/* line 96, ../sass/flat-ui.sass */
+/* line 102, ../sass/flat-ui.sass */
 #main-content img {
   width: 100%;
   height: auto;
 }
-/* line 100, ../sass/flat-ui.sass */
+/* line 106, ../sass/flat-ui.sass */
 #main-content .news-item {
   margin: 0;
   color: #34495e;
   cursor: pointer;
 }
-/* line 106, ../sass/flat-ui.sass */
+/* line 112, ../sass/flat-ui.sass */
 #main-content .news-item:hover .title {
   color: #1f74ad;
 }
-/* line 109, ../sass/flat-ui.sass */
+/* line 115, ../sass/flat-ui.sass */
 #main-content .news-title {
   padding-top: 0;
   margin: 0;
 }
-/* line 113, ../sass/flat-ui.sass */
+/* line 119, ../sass/flat-ui.sass */
 #main-content .news-title a {
   color: inherit;
   text-decoration: none;
 }
-/* line 117, ../sass/flat-ui.sass */
+/* line 123, ../sass/flat-ui.sass */
 #main-content .news-title small {
   color: #ecf0f1;
 }
-/* line 120, ../sass/flat-ui.sass */
+/* line 126, ../sass/flat-ui.sass */
 #main-content a.share-button {
   position: absolute;
   width: 10vw;
@@ -3620,35 +3631,121 @@ html, body {
   background-color: #3498db;
   border-radius: 6px 0 0 0;
 }
-/* line 129, ../sass/flat-ui.sass */
+/* line 135, ../sass/flat-ui.sass */
 #main-content a.share-button:hover {
   color: white;
   background-color: #2383c4;
 }
 
-/* line 134, ../sass/flat-ui.sass */
-#company-social {
-  height: 90vh;
+/* line 139, ../sass/flat-ui.sass */
+.news-mash {
+  position: absolute;
+  font-weight: 300;
+  width: 10vw;
+  top: 0;
+  right: 0;
 }
 
-/* line 138, ../sass/flat-ui.sass */
-#fb-widget {
+/* line 146, ../sass/flat-ui.sass */
+#company-social {
+  height: 90vh;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  float: left;
+}
+/* line 155, ../sass/flat-ui.sass */
+#company-social .row-fluid {
+  padding: 0;
+}
+
+/* line 158, ../sass/flat-ui.sass */
+.social-mash {
+  width: 5vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 6px 0 6px;
+}
+
+/* line 165, ../sass/flat-ui.sass */
+.hidden {
+  display: none;
+}
+
+/* line 168, ../sass/flat-ui.sass */
+.fb-widget {
+  position: relative;
   border-radius: 6px;
   color: #34495e;
 }
+/* line 173, ../sass/flat-ui.sass */
+.fb-widget > div {
+  position: relative;
+}
+/* line 176, ../sass/flat-ui.sass */
+.fb-widget > div.palette-silver {
+  border-radius: 6px 6px 0 0;
+}
 
-/* line 143, ../sass/flat-ui.sass */
+/* line 179, ../sass/flat-ui.sass */
+#fb-feed {
+  height: 27.5vh;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+/* line 184, ../sass/flat-ui.sass */
 #fb-feed p {
   color: #34495e;
 }
 
-/* line 146, ../sass/flat-ui.sass */
+/* line 187, ../sass/flat-ui.sass */
 #tw-widget {
+  position: relative;
   border-radius: 6px;
   color: #34495e;
 }
 
-/* line 151, ../sass/flat-ui.sass */
+/* line 192, ../sass/flat-ui.sass */
+#tw-feed {
+  height: 27.5vh;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+/* line 197, ../sass/flat-ui.sass */
 #tw-feed p {
   color: #34495e;
+}
+
+/* line 200, ../sass/flat-ui.sass */
+.company-1 {
+  color: #34495e;
+}
+
+/* line 203, ../sass/flat-ui.sass */
+.company-2 {
+  color: #f1c40f;
+}
+
+/* line 206, ../sass/flat-ui.sass */
+.company-3 {
+  color: #e74c3c;
+}
+
+/* line 209, ../sass/flat-ui.sass */
+.company-4 {
+  color: #1abc9c;
+}
+
+/* line 212, ../sass/flat-ui.sass */
+.company-5 {
+  color: #34495e;
+}
+
+/* line 215, ../sass/flat-ui.sass */
+.zero {
+  width: 0%;
+  overflow: hidden;
 }

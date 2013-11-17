@@ -14,12 +14,7 @@
     <link href="css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo.ico">
 
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="author" href="humans.txt">
-    <!-- Loading Bootstrap -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Loading Flat UI -->
     <link href="../static/css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -42,9 +37,6 @@
                         <label>Your Company</label>
                         <input id="company" type="text" placeholder="Company Name">
                     </li>
-                </ul>
-                <a id="feed" href="#" class="btn btn-info btn-block btn-large share-button" style="border-radius: 0 0 6px 6px;">Feed It!</a>
-                <ul class="palette-concrete" style="border-radius: 6px 6px 0 0; margin-top: 15px">
                     <li>
                         <label>Competitors</label>
                         <div id="compFields">
@@ -53,7 +45,7 @@
                         <div id="addComp" class="tagsinput-add fui-plus-16" style="margin: 0 auto"></div>
                     </li>
                 </ul>
-                <a id="mash" onClick="" href="#" class="btn btn-info btn-block btn-large" style="border-radius: 0 0 6px 6px;">Mash It!</a>
+                <a id="mash" onClick="" href="#" class="btn btn-info btn-block btn-large" style="border-radius: 0 0 6px 6px;">Feed It!</a>
             </form>
         </div>
 
@@ -64,10 +56,11 @@
 
         <div id="main-content" class="span6 palette-clouds">
             <div id="company-news">
-                <h1>Yammer</h1>
-                <ul class="palette-concrete" style="margin-top: 15px">
+                <h1><span class="company-5">Yammer</span><a id="news-mash"class="btn btn-info btn-large btn-block news-mash">Mash!</a></h1>
+
+                <ul style="margin-top: 15px">
                     {% for news in results %}
-                    <li>
+                    <li class="palette-white">
                         <div class="row-fluid news-item">
                             <div class="span3 no-padding">
                                 <img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/1374367_10201637435715156_920308982_n.jpg" alt="" style="overflow: hidden;">
@@ -78,10 +71,9 @@
                             </div>
                         </div>
                         <a href="" class="btn btn-primary btn-large btn-block share-button">Share</a>
-
                     </li>
 
-                </ul>
+
 
                     {% endfor %}
                 </ul> 
@@ -94,10 +86,10 @@
 
 
         </div>
-        <div id="company-social" class="span3 palette-firm" style="overflow-y: auto">
-            <div class="palette-clouds" style=" border-radius: 6px; height: 40vh; overflow-y: auto;">
-                <div id="fb-widget" class="palette-silver">
-                    <i class="fa fa-facebook-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Insights</h2>
+        <div id="company-social" class="span3 palette-concrete row-fluid" >
+            <div id="fb-widget" class="palette-clouds fb-widget row-fluid" style=" border-radius: 6px;">
+                <div class="palette-silver">
+                    <i class="fa fa-facebook-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Yammer</h2>
                     <div class="row-fluid">
                         <div class="span6">
                             <h4 id="fblikes" style="text-align: center">
@@ -106,66 +98,649 @@
                         </div>
                         <div class="span6">
                             <h4 style="text-align: center;">
-                                204 
+                                204 <br />
                                 Hashtags
                             </h4>
                         </div>
+                        <a class="btn btn-info btn-large btn-block social-mash">Mash!</a>
                     </div>
                 </div>
                 <div id="fb-feed">
-                 <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                   <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
                     <li>
                         <div class="row-fluid">
                             <div class="span3 no-padding">
-                                <img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/1374367_10201637435715156_920308982_n.jpg" alt="" style="overflow: hidden;">
+                                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/369772_695865698_514629110_q.jpg" alt="" style="overflow: hidden;">
                             </div>
                             <div class="span9">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <small>Date and Time</small>
+                                <p>#Yammer Working remotely can be challenging, but Billy Saqr feels more connected to colleagues with Yammer.</p>
+                                <small>November 15 at 1:24pm</small>
                             </div>
                         </div>
                     </li>
-                </ul>
+                    <li>
+                        <div class="row-fluid">
+                            <div class="span3 no-padding">
+                                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/372160_1539743430_1468664320_q.jpg" alt="" style="overflow: hidden;">
+                            </div>
+                            <div class="span9">
+                                <p>Retweeted Dux Raymond Sy (@meetdux):
 
-            </div>
-        </div>
-        <div class="palette-clouds" style=" border-radius: 6px; height: 40vh; overflow-y: auto; margin-top: 15px">
-            <div id="tw-widget" class="palette-silver">
-                <i class="fa fa-twitter-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Insights</h2>
-                <div class="row-fluid">
-                    <div class="span6">
-                        <h4 style="text-align: center">
-                            121,231 Followers
-                        </h4>
-                    </div>
-                    <div class="span6">
-                        <h4 style="text-align: center;">
-                            204 
-                            Hashtags
-                        </h4>
+                                    See you on Nov 18-20 at SHARE Conf AUS - business-centric #SharePoint conference http://t.co/BCmYVY3Bz8 #ensw #yammer</p>
+                                    <small>November 12 at 10:41pm</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/277091_57415772352_507076112_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>#Office365 for Enterprise includes #Yammer! Check out the updates http://t.co/KIkEVVxaME</p>
+                                    <small>November 13 at 11:30am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/370806_100000927092177_1675749299_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>Sanoisin tänään samaa #Yammer -palvelusta.</p>
+                                    <small>November 15 at 4:02am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/373116_127555227315615_627599086_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>#Yammer is always innovating to change the way you do business. Read more about what's new in Yammer and what it means for #Office365 customers on the Office 365 for Business blog.</p>
+                                    <small>November 11 at 2:17pm </small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/c5.5.65.65/s50x50/1012701_544797262246645_1185589020_t.png" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>Mobily موبايلي have shared their success stories of implementing and using Yammer in a panel facilitated by our CEO Patrick Attallah</p>
+                                    <small>November 11 at 2:20am</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/592335_382489581792924_1976418859_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>Yesterday we've reached an important milestone – 100,000th company have signed up for #Bitrix24, making us the fastest growing enterprise social company that has reached both 1000,000 users and 100,000 company signups. Eat your heart out, #Yammer. 
+
+                                        P.S. We also have great news for our Spanish, Portuguese and Dutch speaking clients – the cloud service in your native language will be available in the coming months!</p>
+                                        <small>November 13 at 4:38am </small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
-            </div>
-            <div id="tw-feed">
-             <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
-                <li>
-                    <div class="row-fluid">
-                        <div class="span3 no-padding">
-                            <img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/1374367_10201637435715156_920308982_n.jpg" alt="" style="overflow: hidden;">
-                        </div>
-                        <div class="span9">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <small>Date and Time</small>
+                <div class="palette-clouds fb-widget row-fluid hidden hider" style=" border-radius: 6px;">
+                    <div class="palette-silver company-4">
+                        <i class="fa fa-facebook-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Salesforce</h2>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <h4 id="fblikes" style="text-align: center">
+                                    42513 <br />
+                                    Likes
+                                </h4>
+                            </div>
+                            <div class="span6">
+                                <h4 style="text-align: center;">
+                                    23 <br />
+                                    Hashtags
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </li>
-            </ul>
+                    <div id="fb-feed">
+                       <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/260911_599603993_1692525519_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>#Yammer Working remotely can be challenging, but Billy Saqr feels more connected to colleagues with Yammer.</p>
+                                    <small>November 15 at 1:24pm</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span3 no-padding">
+                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117949_740183123_1339881494_q.jpg" alt="" style="overflow: hidden;">
+                                </div>
+                                <div class="span9">
+                                    <p>Retweeted Dux Raymond Sy (@meetdux):
 
-        </div>
-    </div>
+                                        See you on Nov 18-20 at SHARE Conf AUS - business-centric #SharePoint conference http://t.co/BCmYVY3Bz8 #ensw #yammer</p>
+                                        <small>November 12 at 10:41pm</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1115748_631440170_1722461294_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>#Office365 for Enterprise includes #Yammer! Check out the updates http://t.co/KIkEVVxaME</p>
+                                        <small>November 13 at 11:30am</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1085743_744668164_1200361054_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>Sanoisin tänään samaa #Yammer -palvelusta.</p>
+                                        <small>November 15 at 4:02am</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1085730_718166923_1480479578_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>#Yammer is always innovating to change the way you do business. Read more about what's new in Yammer and what it means for #Office365 customers on the Office 365 for Business blog.</p>
+                                        <small>November 11 at 2:17pm </small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/370610_100003007547713_19386154_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>Mobily موبايلي have shared their success stories of implementing and using Yammer in a panel facilitated by our CEO Patrick Attallah</p>
+                                        <small>November 11 at 2:20am</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/592335_382489581792924_1976418859_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>Yesterday we've reached an important milestone – 100,000th company have signed up for #Bitrix24, making us the fastest growing enterprise social company that has reached both 1000,000 users and 100,000 company signups. Eat your heart out, #Yammer. 
 
-</div>
-</div>
+                                            P.S. We also have great news for our Spanish, Portuguese and Dutch speaking clients – the cloud service in your native language will be available in the coming months!</p>
+                                            <small>November 13 at 4:38am </small>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="palette-clouds fb-widget row-fluid hidden hider" style=" border-radius: 6px;">
+                        <div class="palette-silver">
+                            <i class="fa fa-facebook-square company-3" style="font-size: 3em; margin-top: -2px"></i><h2 class="company-3" style="display: inline; ">  Chatter</h2>
+                            <div class="row-fluid company-3">
+                                <div class="span6">
+                                    <h4 id="fblikes" style="text-align: center">
+                                        4512 <br />
+                                        Likes
+                                    </h4>
+                                </div>
+                                <div class="span6">
+                                    <h4 style="text-align: center;">
+                                        15 <br />
+                                        Hashtags
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fb-feed">
+                           <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/275746_679398107_1560146159_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>#Yammer Working remotely can be challenging, but Billy Saqr feels more connected to colleagues with Yammer.</p>
+                                        <small>November 15 at 1:24pm</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-fluid">
+                                    <div class="span3 no-padding">
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1118140_100003128344397_971052177_q.jpg" alt="" style="overflow: hidden;">
+                                    </div>
+                                    <div class="span9">
+                                        <p>Retweeted Dux Raymond Sy (@meetdux):
+
+                                            See you on Nov 18-20 at SHARE Conf AUS - business-centric #SharePoint conference http://t.co/BCmYVY3Bz8 #ensw #yammer</p>
+                                            <small>November 12 at 10:41pm</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/188189_176890359032890_1465951571_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>#Office365 for Enterprise includes #Yammer! Check out the updates http://t.co/KIkEVVxaME</p>
+                                            <small>November 13 at 11:30am</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/276117_709752196_571731883_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Sanoisin tänään samaa #Yammer -palvelusta.</p>
+                                            <small>November 15 at 4:02am</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1119042_580201604_1280840694_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>#Yammer is always innovating to change the way you do business. Read more about what's new in Yammer and what it means for #Office365 customers on the Office 365 for Business blog.</p>
+                                            <small>November 11 at 2:17pm </small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/157372_715795150_1914369397_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Mobily موبايلي have shared their success stories of implementing and using Yammer in a panel facilitated by our CEO Patrick Attallah</p>
+                                            <small>November 11 at 2:20am</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/592335_382489581792924_1976418859_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Yesterday we've reached an important milestone – 100,000th company have signed up for #Bitrix24, making us the fastest growing enterprise social company that has reached both 1000,000 users and 100,000 company signups. Eat your heart out, #Yammer. 
+
+                                                P.S. We also have great news for our Spanish, Portuguese and Dutch speaking clients – the cloud service in your native language will be available in the coming months!</p>
+                                                <small>November 13 at 4:38am </small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div id="tw-widget" class="palette-clouds fb-widget row-fluid" style=" border-radius: 6px; margin-top: 15px">
+                            <div class="palette-silver">
+                                <i class="fa fa-twitter-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Yammer</h2>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <h4 style="text-align: center">
+                                            46665  <br />
+                                            Followers
+                                        </h4>
+                                    </div>
+                                    <div class="span6">
+                                        <h4 style="text-align: center;">
+                                            12475 <br />
+                                            Tweets
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fb-feed">
+                               <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/378800000642445309/749ca0d9962c619e58ef96d394e1c2f1_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>It's not too late to sign up! This weekend, #Yammer Engineering + Happy Hacksgiving = an Enterprise Hackathon http://eng.yammer.com/yammer-happy-hacksgiving-2/ …</p>
+                                            <small>12:43 PM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/2789770166/f64f03a8121db811ab0d415e90835dfe_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Check out "Yammer 101" on Vimeo http://vimeo.com/69478241  #Vimeo</p>
+                                            <small>10:43 AM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/2935819855/1b1e8d368ab2679a2280b5317b54144d_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>“@Yammer: : http://po.st/K40nN3  #yammermoments” 'explains collaboration perfectly'</p>
+                                            <small>1:35 PM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/1491816393/olaf_normal.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>#spc14jam bring your #surface to #spc14, working on a cool second screen experiance</p>
+                                            <small>11:00 AM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/1466810289/c_zhang_m_normal.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Would love to see more integration of #yammer into other solutions (i.e. CRM, ERP, SharePoint on-premise) moving forward. </p>
+                                            <small>11:11 PM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/1316093574/mymug_normal.png" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Microsoft adds #Yammer to Office 365 Enterprise, introduces real-time co-authoring to its Web apps - #O365 - http://tnw.co/1aas4FE </p>
+                                            <small>11:20 AM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/378800000468917768/776fd078d71bd4c262e5dee0f936d703_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Power users are essential to growing Yammer adoption & engagement. Learn how to identify your #Yammer champions: http://bit.ly/17SXUqL  #BI</p>
+                                            <small>4:05 PM - 8 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/840293680/ivan_twitter_normal.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>6 reasons to use Yammer for IT project management http://ow.ly/nYUZL  via @techrepublic #pm #yammer</p>
+                                            <small>2:02 AM - 16 Aug 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="palette-clouds fb-widget row-fluid hidden hider" style=" border-radius: 6px; margin-top: 15px">
+                            <div class="palette-silver company-4">
+                                <i class="fa fa-twitter-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Salesforce</h2>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <h4 style="text-align: center">
+                                            46665  <br />
+                                            Followers
+                                        </h4>
+                                    </div>
+                                    <div class="span6">
+                                        <h4 style="text-align: center;">
+                                            12475 <br />
+                                            Tweets
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fb-feed">
+                               <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/260788_566851491_666274560_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>It's not too late to sign up! This weekend, #Yammer Engineering + Happy Hacksgiving = an Enterprise Hackathon http://eng.yammer.com/yammer-happy-hacksgiving-2/ …</p>
+                                            <small>12:43 PM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1085628_621779101_4059484_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Check out "Yammer 101" on Vimeo http://vimeo.com/69478241  #Vimeo</p>
+                                            <small>10:43 AM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1118407_745564365_178257869_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>“@Yammer: : http://po.st/K40nN3  #yammermoments” 'explains collaboration perfectly'</p>
+                                            <small>1:35 PM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/370004_622126920_1224696783_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>#spc14jam bring your #surface to #spc14, working on a cool second screen experiance</p>
+                                            <small>11:00 AM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/260797_573804401_3342492_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Would love to see more integration of #yammer into other solutions (i.e. CRM, ERP, SharePoint on-premise) moving forward. </p>
+                                            <small>11:11 PM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/1316093574/mymug_normal.png" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Microsoft adds #Yammer to Office 365 Enterprise, introduces real-time co-authoring to its Web apps - #O365 - http://tnw.co/1aas4FE </p>
+                                            <small>11:20 AM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/378800000468917768/776fd078d71bd4c262e5dee0f936d703_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Power users are essential to growing Yammer adoption & engagement. Learn how to identify your #Yammer champions: http://bit.ly/17SXUqL  #BI</p>
+                                            <small>4:05 PM - 8 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/840293680/ivan_twitter_normal.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>6 reasons to use Yammer for IT project management http://ow.ly/nYUZL  via @techrepublic #pm #yammer</p>
+                                            <small>2:02 AM - 16 Aug 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="palette-clouds fb-widget row-fluid hidden hider" style=" border-radius: 6px; margin-top: 15px">
+                            <div class="palette-silver company-3"><i class="fa fa-twitter-square" style="font-size: 3em; margin-top: -2px"></i><h2 style="display: inline; ">  Chatter</h2>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <h4 style="text-align: center">
+                                            46665  <br />
+                                            Followers
+                                        </h4>
+                                    </div>
+                                    <div class="span6">
+                                        <h4 style="text-align: center;">
+                                            12475 <br />
+                                            Tweets
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fb-feed">
+                               <ul style="margin-top: 15px; list-style: none; padding: 0; margin: 0">
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/173269_501838558_1741905457_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>It's not too late to sign up! This weekend, #Yammer Engineering + Happy Hacksgiving = an Enterprise Hackathon http://eng.yammer.com/yammer-happy-hacksgiving-2/ …</p>
+                                            <small>12:43 PM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1116809_722591581_682413025_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Check out "Yammer 101" on Vimeo http://vimeo.com/69478241  #Vimeo</p>
+                                            <small>10:43 AM - 15 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/371326_678718895_651360834_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>“@Yammer: : http://po.st/K40nN3  #yammermoments” 'explains collaboration perfectly'</p>
+                                            <small>1:35 PM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1086877_521724992_1654504650_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>#spc14jam bring your #surface to #spc14, working on a cool second screen experiance</p>
+                                            <small>11:00 AM - 14 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1118573_662668681_1764093701_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Would love to see more integration of #yammer into other solutions (i.e. CRM, ERP, SharePoint on-premise) moving forward. </p>
+                                            <small>11:11 PM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1118696_611815750_849674675_q.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Microsoft adds #Yammer to Office 365 Enterprise, introduces real-time co-authoring to its Web apps - #O365 - http://tnw.co/1aas4FE </p>
+                                            <small>11:20 AM - 11 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/378800000468917768/776fd078d71bd4c262e5dee0f936d703_normal.jpeg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>Power users are essential to growing Yammer adoption & engagement. Learn how to identify your #Yammer champions: http://bit.ly/17SXUqL  #BI</p>
+                                            <small>4:05 PM - 8 Nov 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-fluid">
+                                        <div class="span3 no-padding">
+                                            <img src="https://pbs.twimg.com/profile_images/840293680/ivan_twitter_normal.jpg" alt="" style="overflow: hidden;">
+                                        </div>
+                                        <div class="span9">
+                                            <p>6 reasons to use Yammer for IT project management http://ow.ly/nYUZL  via @techrepublic #pm #yammer</p>
+                                            <small>2:02 AM - 16 Aug 13</small>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
 
@@ -184,43 +759,149 @@
 
 
 
-<!-- Load JS here for greater good =============================-->
-<script src="../static/js/jquery-1.8.2.min.js"></script>
-<script src="../static/js/jquery-ui-1.10.0.custom.min.js"></script>
-<script src="../static/js/jquery.dropkick-1.0.0.js"></script>
-<script src="../static/js/custom_checkbox_and_radio.js"></script>
-<script src="../static/js/custom_radio.js"></script>
-<script src="../static/js/jquery.tagsinput.js"></script>
-<script src="../static/js/bootstrap-tooltip.js"></script>
-<script src="../static/js/jquery.placeholder.js"></script>
-<script src="../static/js/application.js"></script>
-<script>
-$(function() {
-    $("#feed").click(function() {
-        $(this).closest("form").attr('action', 'fileA.php');
-    });
-    $("#mash").click(function() {
-        $(this).closest("form").attr('action', 'fileB.php');
-    });
-    var compFields = $('#compFields');
-    var i = $('#compFields input').size();
+            <!-- Load JS here for greater good =============================-->
+            <script src="../static/js/jquery-1.8.2.min.js"></script>
+            <script src="../static/js/jquery-ui-1.10.0.custom.min.js"></script>
+            <script src="../static/js/jquery.dropkick-1.0.0.js"></script>
+            <script src="../static/js/custom_checkbox_and_radio.js"></script>
+            <script src="../static/js/custom_radio.js"></script>
+            <script src="../static/js/jquery.tagsinput.js"></script>
+            <script src="../static/js/bootstrap-tooltip.js"></script>
+            <script src="../static/js/jquery.placeholder.js"></script>
+            <script src="../static/js/application.js"></script>
+            <script>
+            $(document).ready(function() {
+              var fblike = "https://graph.facebook.com/29990386077";
+              $.getJSON( fblike )
+              .done(function( json ) {
+                $("#fblikes").html( json.likes +"<br /> Likes" );
+            })
+              .fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                console.log( "Request Failed: " + err );
+            });
+          });
+            </script>
+            <script>
+            $(function() {
+                $("#feed").click(function() {
+                    $(this).closest("form").attr('action', 'fileA.php');
+                });
+                $("#mash").click(function() {
+                    $(this).closest("form").attr('action', 'fileB.php');
+                });
+                var compFields = $('#compFields');
+                var i = $('#compFields input').size();
 
-    $('#addComp').live('click', function() {
-        $('<a><input type="text" name="competitor-' + i + '" style="width: 70%"><div id="remove" class="tagsinput-add fui-cross-24 remove" style="margin: 0 auto"></div></a>').appendTo(compFields);
-        i++;
-        return false;
-    });
-    $('#remove').live('click', function() { 
-        if( i > 2 ) {
-            $(this).parents('a').remove();
-            i--;
-        }
-        return false;
-    });
-});
+                $('#addComp').live('click', function() {
+                    $('<a><input type="text" name="competitor-' + i + '" style="width: 70%"><div id="remove" class="tagsinput-add fui-cross-24 remove" style="margin: 0 auto"></div></a>').appendTo(compFields);
+                    i++;
+                    return false;
+                });
+                $('#remove').live('click', function() { 
+                    if( i > 1 ) {
+                        $(this).parents('a').remove();
+                        i--;
+                    }
+                    return false;
+                });
+
+                function fullNews() {
+                    $("#company-social").css("opacity", "0");
+                    setTimeout(function() {
+                        $("#company-social").css("display", "none");
+                        $("#main-content").addClass("span9");
+                        $("#main-content").removeClass("span6");
+                    }
+                    , 200);
+                    $("#news-mash").text("Back");
+                    $(this).one("click", shrinkNews);
+                }
+
+                function shrinkNews() {
+                    $("#main-content").removeClass("span9");
+                    $("#main-content").addClass("span6");
+                    setTimeout(function() {
+                        $("#company-social").css("display", "block");
+                    }
+                    , 200);
+                    setTimeout(function() {
+                        $("#company-social").css("opacity", "1");
+                    }
+                    , 400);
+                    $("#news-mash").text("Mash!");
+                    $(this).one("click", fullNews);
+                }
+
+                $("#news-mash").one("click", fullNews);
+
+                function fullSocial() {
+                    $("#main-content").css("opacity", "0");
+                    $("#company-social").addClass("span9");
+                    setTimeout(function() {
+                        $("#main-content").addClass("zero");
+                        $("#main-content").removeClass("span6");
+                    }
+                    , 400);
+                    setTimeout(function() {
+                        $("#company-social").removeClass("span3");
+                        $(".fb-widget").addClass("span4");
+
+                    }
+                    , 1000);
+                    setTimeout(function() {
+                        $(".fb-widget").css("margin-right", "10px");
+                        $(".hidden").css("opacity", "1");
+                        $(".fb-widget").css("display", "block");
+                    }
+                    , 1400);
+                    $(".social-mash").text("Back");
+                    $(this).one("click", shrinkSocial);
+                }
+
+                function shrinkSocial() {
+                    $(".hider").css("opacity", "0");
+                    setTimeout(function() {
+                        $("#company-social").addClass("span3");
+                        $("#company-social").removeClass("span9");
+                        $(".fb-widget").css("margin-right", "0");
+                        $(".fb-widget").css("display", "none");
+                        $("#fb-widget").css("display", "block");
+                        $("#fb-widget").removeClass("span4");
+                        $("#fb-widget").addClass("span12");
+                        $("#tw-widget").css("display", "block");
+                        $("#tw-widget").removeClass("span4");
+                        $("#tw-widget").addClass("span12");
+                        $("#main-content").addClass("span6");
+                        $("#main-content").removeClass("zero");
+                    }
+                    , 400);
+                    setTimeout(function() {
+                        $("#main-content").css("opacity", "1");
+                    }
+                    , 1000);
+                    $(".social-mash").text("Mash!");
+                    $(this).one("click", fullSocial);
+                }
+
+                $(".social-mash").one("click", fullSocial);
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
 
 </script>
 
 
-  </body>
-  </html>
+</body>
+</html>

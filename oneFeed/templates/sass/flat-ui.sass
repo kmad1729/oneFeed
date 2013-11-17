@@ -73,8 +73,15 @@ html, body
 #main-content
 	height: 90vh
 	overflow-y: auto
+	-webkit-transition: all 0.5s ease
+	-moz-transition: all 0.5s ease
+	-ms-transition: all 0.5s ease
+	-o-transition: all 0.5s ease
+	transition: all 0.5s ease
+	float: left
 
 	h1 
+		position: relative
 		color: $night
 		text-align: center
 
@@ -84,10 +91,9 @@ html, body
 		margin: 0
 
 		li
-			border-color: #888
-			border-width: 0 0 thin 0
-			border-style: solid
+			border: none
 			padding: 15px
+			margin-bottom: 15px
 			position: relative
 
 			.no-padding
@@ -130,29 +136,85 @@ html, body
 			color: $inverse
 			background-color: scale-color($info, $lightness: -15%)
 
+.news-mash
+	position: absolute
+	font-weight: 300
+	width: 10vw
+	top: 0
+	right: 0
 			
 #company-social
 	height: 90vh
+	-webkit-transition: all 0.5s ease
+	-moz-transition: all 0.5s ease
+	-ms-transition: all 0.5s ease
+	-o-transition: all 0.5s ease
+	transition: all 0.5s ease
+	float: left
 
+	.row-fluid
+		padding: 0
 
-#fb-widget
+.social-mash
+	width: 5vw
+	position: absolute
+	top: 0
+	right: 0
+	border-radius: 0 6px 0 6px
+
+.hidden
+	display: none
+
+.fb-widget
+	position: relative
 	border-radius: 6px
 	color: $base
 
+	&>div 
+		position: relative
+
+	&>div.palette-silver
+		border-radius: 6px 6px 0 0
+
 #fb-feed
+	height: 27.5vh
+	overflow-y: auto
+	word-wrap: break-word
+
 	p
 		color: $base
 
 #tw-widget
+	position: relative
 	border-radius: 6px
 	color: $base
 
 #tw-feed
+	height: 27.5vh
+	overflow-y: auto
+	word-wrap: break-word
+
 	p
 		color: $base
 
+.company-1
+	color: $base
 
+.company-2
+	color: $warning
 
+.company-3
+	color: $danger
+
+.company-4
+	color: $firm
+
+.company-5
+	color: $night
+
+.zero
+	width: 0%
+	overflow: hidden
 
 
 
