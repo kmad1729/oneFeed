@@ -1,5 +1,5 @@
 
-import feedparser
+#import feedparser
 import requests
 import simplejson
 
