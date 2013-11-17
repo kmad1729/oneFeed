@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title> Add competetor information </title>
+</head>
+
+<body>
+    <form action="/add/" method="get">
+        <input type = "text" name = "q">
+        <input type = "submit" value = "ADD">
+    </form>
+
+{% for company in  competers %}
+   <p> {{ company }} </p>
+
+{% empty %}
+    <p> There are no companies added </p>
+{% endfor %}
+</body>
+</html>
