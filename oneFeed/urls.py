@@ -1,5 +1,8 @@
 from django.conf.urls import patterns, include, url
-from views import hello, add_competer, added_competer
+from django.conf.urls.static import static
+from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from views import hello, add_competer, added_competer, display_results
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -17,5 +20,6 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello),
     url(r'^add/$', add_competer),
+    url(r'^display/$', display_results),
 #    url(r'^added_competer/$', added_competer),
-)
+) + staticfiles_urlpatterns() 

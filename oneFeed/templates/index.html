@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
 <head>
+    <% load staticfiles %>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>oneFeed</title>
+<<<<<<< HEAD
     <link rel="author" href="humans.txt">
     <!-- Loading Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -12,6 +14,16 @@
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo.ico">
+=======
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="author" href="humans.txt">
+    <!-- Loading Bootstrap -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../static/css/flat-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+>>>>>>> 5c88f423e4056a10fde6d782ff5a0fbccd42380e
 
 </head>
 <body>
@@ -51,24 +63,31 @@
 
 
 
+
         <div id="main-content" class="span6 palette-clouds">
             <div id="company-news">
                 <h1>Yammer</h1>
                 <ul class="palette-concrete" style="margin-top: 15px">
+                    {% for news in results %}
                     <li>
                         <div class="row-fluid news-item">
                             <div class="span3 no-padding">
                                 <img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/1374367_10201637435715156_920308982_n.jpg" alt="" style="overflow: hidden;">
                             </div>
                             <div class="span9 news-title">
-                                <a class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a><br />
-                                <small>Date and Time</small>
+                                <a href= {{news.link }} class="title">{{ news.title }} </a><br />
+                                <small>{{ news.pubDate }} </small>
                             </div>
                         </div>
                         <a href="" class="btn btn-primary btn-large btn-block share-button">Share</a>
+<<<<<<< HEAD
                     </li>
 
                 </ul>
+=======
+                    {% endfor %}
+                </ul> 
+>>>>>>> 5c88f423e4056a10fde6d782ff5a0fbccd42380e
             </div>
 
 
@@ -212,6 +231,20 @@ $(function() {
 
 </script>
 
+<<<<<<< HEAD
+=======
+    <!-- Load JS here for greater good =============================-->
+    <script src="../static/js/jquery-1.8.2.min.js"></script>
+    <script src="../static/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="../static/js/jquery.dropkick-1.0.0.js"></script>
+    <script src="../static/js/custom_checkbox_and_radio.js"></script>
+    <script src="../static/js/custom_radio.js"></script>
+    <script src="../static/js/jquery.tagsinput.js"></script>
+    <script src="../static/js/bootstrap-tooltip.js"></script>
+    <script src="../static/js/jquery.placeholder.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+    <script src="../static/js/application.js"></script>
+>>>>>>> 5c88f423e4056a10fde6d782ff5a0fbccd42380e
     <!--[if lt IE 8]>
       <script src="js/icon-font-ie7.js"></script>
       <script src="js/icon-font-ie7-24.js"></script>
