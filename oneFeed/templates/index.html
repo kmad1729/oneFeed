@@ -31,7 +31,7 @@
 
     <div class="row-fluid">
         <div id="sidebar" class="span3 palette-night">
-            <form action="index.html" method="GET">
+            <form action="/display/" method="GET" id="feed_it_form">
                 <ul class="palette-concrete" style="border-radius: 6px 6px 0 0;">
                     <li>
                         <label>Your Company</label>
@@ -45,7 +45,7 @@
                         <div id="addComp" class="tagsinput-add fui-plus-16" style="margin: 0 auto"></div>
                     </li>
                 </ul>
-                <a id="mash" onClick="" href="#" class="btn btn-info btn-block btn-large" style="border-radius: 0 0 6px 6px;">Feed It!</a>
+                    <a id="mash" onClick="document.forms['feed_it_form'].submit();" href="#" class="btn btn-info btn-block btn-large" style="border-radius: 0 0 6px 6px;">Feed It!</a>
             </form>
         </div>
 
@@ -66,7 +66,7 @@
                                 <img src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/1374367_10201637435715156_920308982_n.jpg" alt="" style="overflow: hidden;">
                             </div>
                             <div class="span9 news-title">
-                                <a href= {{news.link }} class="title">{{ news.title }} </a><br />
+                                <a href= "{{news.link}}" class="title">{{ news.title }} </a><br />
                                 <small>{{ news.pubDate }} </small>
                             </div>
                         </div>

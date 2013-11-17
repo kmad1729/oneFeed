@@ -1,3 +1,4 @@
 authentication_keys.ini
 *.sass-cache
 *.DS*
+*.pyc
