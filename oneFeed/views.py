@@ -28,19 +28,13 @@ def display_results(request):
     if 'competitor' in request.GET:
         competitor_list = [i[1] for i in request.GET.items() if 'competitor' in i[0]]
         add_competer_to_file(",".join(competitor_list))
+        ###generate json for competitor list
+        if competitor_list:
+            for c in competitor_list:
+                write_entries_to_json(c, test_path)
     else:
-        print 'hahhahhah'
         pass
-    #return HttpResponse(message)
-    test_path = os.path.join(os.path.dirname(__file__), 'static', 'my_json.json')
 
-    ###generate json for competitor list
-    if competitor_list:
-        for c in competitor_list:
-            write_entries_to_json(c, test_path)
-    
-            
-    competers = get_competer_list()
     results = read_json_to_dict(test_path)
 
 
