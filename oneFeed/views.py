@@ -16,6 +16,10 @@ def add_competer(request):
     competers = get_competer_list()
     return render(request, 'add_competer.html', dict(competers = competers))
 
+def display_results(request):
+    results = [1,2,3,4]
+    return render(request, 'index.html', dict(results = results))
+
 def added_competer(request):
 
     return HttpResponse('hello world')
