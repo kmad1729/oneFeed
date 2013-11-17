@@ -19,7 +19,7 @@ def add_competer(request):
     return render(request, 'add_competer.html', dict(competers = competers))
 
 def display_results(request):
-    test_path = os.path.join(os.path.dirname(__file__), 'test.json')
+    test_path = os.path.join(os.path.dirname(__file__), 'static', 'test.json')
     print test_path
     results = read_json_to_dict(test_path)
     return render(request, 'index.html', dict(results = results))

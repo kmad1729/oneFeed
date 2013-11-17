@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+		"company_id": "company_1",
         "title": "Microsoft Adds Yammer To Office 365 Enterprise, Updates Web Apps - The Next Web",
         "link": "http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGcvfvD7NRf4gp2TWx-FeCOiS9KBQ&url=http://thenextweb.com/microsoft/2013/11/07/microsoft-adds-yammer-to-office-365-enterprise-introduces-real-time-co-authoring-to-its-web-apps/",
         "pubDate": "Thursday 11/07/2013 12:42:25 GMT"
