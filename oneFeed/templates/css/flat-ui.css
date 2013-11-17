@@ -3543,24 +3543,33 @@ html, body {
   padding: 15px;
   text-align: center;
 }
+/* line 66, ../sass/flat-ui.sass */
+#sidebar ul li .remove {
+  background-color: #e74c3c;
+  height: 100%;
+}
+/* line 70, ../sass/flat-ui.sass */
+#sidebar ul li .remove:hover {
+  background-color: #dc2d1b;
+}
 
-/* line 67, ../sass/flat-ui.sass */
+/* line 73, ../sass/flat-ui.sass */
 #main-content {
   height: 90vh;
   overflow-y: auto;
 }
-/* line 71, ../sass/flat-ui.sass */
+/* line 77, ../sass/flat-ui.sass */
 #main-content h1 {
   color: #34495e;
   text-align: center;
 }
-/* line 75, ../sass/flat-ui.sass */
+/* line 81, ../sass/flat-ui.sass */
 #main-content ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-/* line 80, ../sass/flat-ui.sass */
+/* line 86, ../sass/flat-ui.sass */
 #main-content ul li {
   border-color: #888888;
   border-width: 0 0 thin 0;
@@ -3568,40 +3577,40 @@ html, body {
   padding: 15px;
   position: relative;
 }
-/* line 87, ../sass/flat-ui.sass */
+/* line 93, ../sass/flat-ui.sass */
 #main-content ul li .no-padding {
   padding: 0;
 }
-/* line 90, ../sass/flat-ui.sass */
+/* line 96, ../sass/flat-ui.sass */
 #main-content img {
   width: 100%;
   height: auto;
 }
-/* line 94, ../sass/flat-ui.sass */
+/* line 100, ../sass/flat-ui.sass */
 #main-content .news-item {
   margin: 0;
   color: #34495e;
   cursor: pointer;
 }
-/* line 100, ../sass/flat-ui.sass */
+/* line 106, ../sass/flat-ui.sass */
 #main-content .news-item:hover .title {
   color: #1f74ad;
 }
-/* line 103, ../sass/flat-ui.sass */
+/* line 109, ../sass/flat-ui.sass */
 #main-content .news-title {
   padding-top: 0;
   margin: 0;
 }
-/* line 107, ../sass/flat-ui.sass */
+/* line 113, ../sass/flat-ui.sass */
 #main-content .news-title a {
   color: inherit;
   text-decoration: none;
 }
-/* line 111, ../sass/flat-ui.sass */
+/* line 117, ../sass/flat-ui.sass */
 #main-content .news-title small {
   color: #ecf0f1;
 }
-/* line 114, ../sass/flat-ui.sass */
+/* line 120, ../sass/flat-ui.sass */
 #main-content a.share-button {
   position: absolute;
   width: 10vw;
@@ -3611,13 +3620,35 @@ html, body {
   background-color: #3498db;
   border-radius: 6px 0 0 0;
 }
-/* line 123, ../sass/flat-ui.sass */
+/* line 129, ../sass/flat-ui.sass */
 #main-content a.share-button:hover {
   color: white;
   background-color: #2383c4;
 }
 
-/* line 128, ../sass/flat-ui.sass */
+/* line 134, ../sass/flat-ui.sass */
 #company-social {
   height: 90vh;
+}
+
+/* line 138, ../sass/flat-ui.sass */
+#fb-widget {
+  border-radius: 6px;
+  color: #34495e;
+}
+
+/* line 143, ../sass/flat-ui.sass */
+#fb-feed p {
+  color: #34495e;
+}
+
+/* line 146, ../sass/flat-ui.sass */
+#tw-widget {
+  border-radius: 6px;
+  color: #34495e;
+}
+
+/* line 151, ../sass/flat-ui.sass */
+#tw-feed p {
+  color: #34495e;
 }
